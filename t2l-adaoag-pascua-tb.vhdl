@@ -2,19 +2,19 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity st8l_adaoag_pascua_tb is
+entity t2l_adaoag_pascua_tb is
 
-end entity st8l_adaoag_pascua_tb;
+end entity t2l_adaoag_pascua_tb;
 
-architecture st8l_adaoag_pascua_tb of st8l_adaoag_pascua_tb is
+architecture t2l_adaoag_pascua_tb of t2l_adaoag_pascua_tb is
      signal in_boggis, in_bunce, in_bean, out_boggis, out_bunce, out_bean, alarm : std_logic;
      
-     component st8l_adaoag_pascua is
+     component t2l_adaoag_pascua is
           port ( in_boggis, in_bunce, in_bean, out_boggis, out_bunce, out_bean : in std_logic; alarm : out std_logic);
-     end component st8l_adaoag_pascua;
+     end component t2l_adaoag_pascua;
 
 begin
-     uut: component st8l_adaoag_pascua port map(in_boggis, in_bunce, in_bean, out_boggis, out_bunce, out_bean, alarm);
+     uut: component t2l_adaoag_pascua port map(in_boggis, in_bunce, in_bean, out_boggis, out_bunce, out_bean, alarm);
 
 process
      variable error_count: integer := 0;
@@ -42,4 +42,4 @@ begin
      report "Done with the test. There were " & integer'image(error_count) & "errors";
      wait;
 end process;
-end architecture st8l_adaoag_pascua_tb;
+end architecture t2l_adaoag_pascua_tb;
